@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
         
-    let model = try! VNCoreMLModel(for: MobileNetV2().model)
+    let model = try! VNCoreMLModel(for: MobileNetV2(configuration: .init()).model)
 
     
     override func viewDidLoad() {
